@@ -3,6 +3,7 @@ try {
   userConfig = await import('./venky.config')
 } catch (e) {
   // ignore error
+  console.log(e);
 }
 
 /** @type {import('next').NextConfig} */
