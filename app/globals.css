@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 195 9% 85%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 354 71% 81%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 204 14% 79%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 25 15% 42%;
+    --muted-foreground: 204 14% 79%;
+    --accent: 96 47% 70%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 8% 72%;
+    --input: 20 8% 72%;
+    --ring: 354 71% 81%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 354 71% 81%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 204 14% 79%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 25 15% 42%;
+    --muted-foreground: 204 14% 79%;
+    --accent: 96 47% 70%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 8% 72%;
+    --input: 20 8% 72%;
+    --ring: 354 71% 81%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+.glass-effect {
+  backdrop-filter: blur(8px);
+  background: rgba(231, 113, 125, 0.1);
+  border: 1px solid rgba(231, 113, 125, 0.2);
+}
+
+.glow {
+  box-shadow: 0 0 15px rgba(231, 113, 125, 0.5);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(231, 113, 125, 0.7);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #e7717d, #afd275);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-pattern {
+  background-color: #fff;
+  background-image: radial-gradient(#e7717d 0.5px, transparent 0.5px), radial-gradient(#e7717d 0.5px, #fff 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.1;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(231, 113, 125, 0.2);
+}
+
+.button-gradient {
+  background: linear-gradient(45deg, #e7717d, #afd275);
+  transition: all 0.3s ease;
+}
+
+.button-gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
